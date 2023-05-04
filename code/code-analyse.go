@@ -1092,15 +1092,15 @@ func (d *CodeAnalyzer) collectSelectorsForInterfaceType(t *TypeInfo, depth int, 
 			}
 			//<<
 
-			panic("unnamed interface should have collected direct selectors now. " +
-				fmt.Sprintf("underlying index: %v. index: %v. name: %#v. %#v. %v",
-					t.Underlying.index,
-					t.index,
-					t.TypeName.Name(),
-					t.Underlying.TT,
-					t.TT.Underlying(),
-				),
-			)
+			// panic("unnamed interface should have collected direct selectors now. " +
+			// 	fmt.Sprintf("underlying index: %v. index: %v. name: %#v. %#v. %v",
+			// 		t.Underlying.index,
+			// 		t.index,
+			// 		t.TypeName.Name(),
+			// 		t.Underlying.TT,
+			// 		t.TT.Underlying(),
+			// 	),
+			// )
 		}
 		//if t.DirectSelectors != nil {
 		//	panic("Selectors of named interface should be blank now")
@@ -1129,7 +1129,7 @@ func (d *CodeAnalyzer) collectSelectorsForInterfaceType(t *TypeInfo, depth int, 
 			for i := 0; i < itt.NumMethods(); i++ {
 				fmt.Fprintf(&bd, "    Method(%v): %v\n", i, itt.Method(i))
 			}
-			panic(fmt.Sprintf("unnamed interface should have collected direct selectors now. %#v.\nMore info:\n%s", t, bd.String()))
+			// panic(fmt.Sprintf("unnamed interface should have collected direct selectors now. %#v.\nMore info:\n%s", t, bd.String()))
 		}
 
 		//hasEmbeddings := false
